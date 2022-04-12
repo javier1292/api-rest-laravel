@@ -9,6 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 {
    protected $table = 'posts';
 
+   protected $fillable  =  [
+    'Titulo',
+    'content',
+    'id_categoria',
+    'Password',
+];
+
    //RELACION DE MUCHOS A UNO 
    public function users(){
        return $this->belongsTo('App\Models\User', 'user_id');

@@ -44,4 +44,9 @@ Route::GET('/user/detail/{id}', [Usercontroller::class, 'detail']);
 
 //rutas del controlador de categoris
 Route::resource('/category', categoriaController::class);
+//routas del post
 Route::resource('/post', postcontroller::class);
+Route::POST('/post/upload', [postcontroller::class, 'upload']);
+Route::GET('/post/imagen/{filename}', [postcontroller::class, 'getimage']);
+Route::GET('/post/categoria/{id}', [postcontroller::class, 'obtenerPostPorCategoria']);
+Route::GET('/post/user/{id}', [postcontroller::class, 'obtenerPostPorUsuarios']);
